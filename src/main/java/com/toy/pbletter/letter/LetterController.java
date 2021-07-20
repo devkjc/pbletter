@@ -27,4 +27,9 @@ public class LetterController {
         return ResponseEntity.ok(userFeign.getYaho2());
     }
 
+    @GetMapping("/test")
+    @ApiOperation(value = "Letter Test")
+    public ResponseEntity<String> getHello() {
+        return ResponseEntity.ok("Hello");
+    }
 }

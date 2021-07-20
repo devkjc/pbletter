@@ -23,8 +23,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.cloud:spring-cloud-starter'
-    implementation 'org.springframework.cloud:spring-cloud-security'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
@@ -41,6 +40,10 @@ dependencies {
     //firebase
     implementation 'com.google.firebase:firebase-admin:6.8.1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    //security
+    implementation 'org.springframework.cloud:spring-cloud-security'
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
+	compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.1.RELEASE'
 }
 
 dependencyManagement {
