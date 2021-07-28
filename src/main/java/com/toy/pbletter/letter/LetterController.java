@@ -1,6 +1,7 @@
 package com.toy.pbletter.letter;
 
 import com.toy.pbletter.user.UserFeign;
+import com.toy.pbletter.user.domain.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +31,8 @@ public class LetterController {
     @GetMapping("/test")
     @ApiOperation(value = "Letter Test")
     public ResponseEntity<String> getHello() {
+        User user = userFeign.getUser();
+        System.out.println("user :: " + user.getUid());
         return ResponseEntity.ok("Hello");
     }
 }
