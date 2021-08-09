@@ -32,7 +32,7 @@ public class LetterController {
     @ApiOperation(value = "Letter Test")
     public ResponseEntity<String> getHello() {
         User user = userFeign.getUser();
-        System.out.println("user :: " + user.getUid());
+        log.info("user :: " + user.getUid());
         return ResponseEntity.ok("Hello");
     }
 }
